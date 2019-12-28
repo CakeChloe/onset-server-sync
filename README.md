@@ -1,6 +1,47 @@
 # Onset Server Sync
 
-The Onset Server Sync package generates mainly server-sided functions that allows you to sync client sided functions through all clients.
+The Onset Server Sync package generates mainly server-sided functions that allows you to sync client sided functions through all clients, in conclusion, it simplifies our lives when we just have to change one or two parameters. This package can also be used to reduce your client code if you're one of those freaks who doesn't want their client code for whatever to be leaked easily.
+
+___Do not use this to replace your laziness! If you have a lot of settings to change, make a seperate event like you would normally do! Do not send 10 requests out at once because you're lazy.___
+
+## Examples (before & after)
+
+### Setting the time globally
+
+#### Before:
+##### Server:
+```lua
+AddCommand("setworldtime", function(player, time)
+  if(type(time) ~= "number" or 0 < time > 24) then
+    return AddPlayerChat(player, 'The time argument must be a number between 0 and 24!')
+  end
+  
+  for _, target in pairs(GetAllPlayers()) do
+    CallRemoteEvent(target, "OnTimeChange", time)
+  end
+end)
+```
+#### Client:
+```lua
+AddRemoteEvent("OnTimeUpdate", function(time)
+  SetTime(time)
+end)
+```
+
+#### After:
+```lua
+local sync = ImportPackage("sync")
+
+AddCommand("setworldtime", function(player, time)
+  if(type(time) ~= "number" or 0 < time > 24) then
+    return AddPlayerChat(player, 'The time argument must be a number between 0 and 24!')
+  end
+  
+  for _, target in pairs(GetAllPlayers()) do
+    sync.SetPlayerTime(target, time)
+  end
+end)
+```
 
 ## Functions
 
