@@ -318,7 +318,7 @@ AddFunctionExport("SetPlayerNPCClothingPreset", function(player, npc, clothing_p
 		return false
 	end
 
-	return CallRemoteEvent(åöayer, "OnNPCClothingPresetChange", npc, clothing_preset)
+	return CallRemoteEvent(player, "OnNPCClothingPresetChange", npc, clothing_preset)
 end)
 
 -- End Of SetPlayerNPCClothingPreset
