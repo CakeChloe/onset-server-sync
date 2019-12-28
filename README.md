@@ -30,6 +30,7 @@ The Onset Server Sync package generates mainly server-sided functions that allow
 |Server|SetPlayerFOV(player, fov)|OnFOVChange(fov)|
 |Server|SetPlayerCameraViewDistance(player, distance)|OnCameraViewDistanceChange(distance)|
 |Server|SetPlayerNearClipPlane(player, distance)|OnNearClipPlaneChange(distance)|
+|Server|SetPlayerControllerOrientedMovement(player [, bToggle])|OnControllerOrientedMovementChange(bToggle)|
 |Server|SetPlayerRotationRate(player, RotationRate)|OnRotationRateChange(RotationRate)|
 |Server|TogglePlayerFirstPersonCamera(player, bToggle)|OnFirstPersonCameraToggle(bToggle)|
 |Server|TogglePlayerMouseCursor(player, bToggle)|OnMouseCursorToggle(bToggle)|
@@ -47,6 +48,7 @@ The Onset Server Sync package generates mainly server-sided functions that allow
 ### Sounds
 |Side|Function|Event|
 |----|-------|--------|
+|Server|SetPlayerSoundPitch(player, sound, Pitch) \*|OnSoundPitchUpdate(sound, Pitch)|
 |Server|DestroyPlayerSound(player, sound) \*|OnSoundDestroy(sound)|
 
 ### Text Boxes
@@ -57,6 +59,8 @@ The Onset Server Sync package generates mainly server-sided functions that allow
 ### Objects
 |Side|Function|Event|
 |----|-------|--------|
+|Server|SetPlayerObjectEditorSpeed(player, speed)|OnObjectEditorSpeedChange(speed)|
+|Server|TogglePlayerObjectHitEvents(player, object [, bToggle])|OnObjectHitEventsToggle(object, bToggle)|
 |Server|LoadPlayerPak(player, PakName, RootPath, ContentPath)|OnLoadPath(PakName, RootPath, ContentPath)|
 |Server|ReplacePlayerObjectModelMesh(player, ModelId, PathToMesh)|OnObjectModelMeshChange(ModelId, PathToMesh)|
 |Server|SetPlayerObjectAnimatedTexture(player, object, TextureFile, Rows, Columns [, MaterialSlot])|OnObjectAnimatedTextureChange(object, TextureFile, Rows, Columns, MaterialSlot)|
@@ -64,6 +68,7 @@ The Onset Server Sync package generates mainly server-sided functions that allow
 ### Environment
 |Side|Function|Event|
 |----|-------|--------|
+|Server|CreatePlayerFireworks(player, modelid, x, y, z [, rx, ry, rz])|OnFireworksSpawn(modelid, x, y, z, rx, ry, rz)|
 |Server|SetPlayerTime(player, time)|OnTimeChange(time)|
 |Server|SetPlayerSunAzimuth(player, azimuth)|OnSunAzimuthChange(azimuth)|)|
 |Server|SetPlayerSunRadius(player, radius)|OnSunRadiusChange(radius)|
