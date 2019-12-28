@@ -7,6 +7,7 @@ The Onset Server Sync package generates mainly server-sided functions that allow
 ### Keys
 |Side|Function|Event|
 |----|-------|--------|
+|Server|ConnectPlayerToServer(player, Address, Port [, Password])|OnServerchange(Address, Port, Password)|
 |Server|SetPlayerInputMode(player, InputMode)|OnInputModeChange(InputMode)|
 
 ### Waypoints
@@ -29,8 +30,11 @@ The Onset Server Sync package generates mainly server-sided functions that allow
 |Server|SetPlayerFOV(player, fov)|OnFOVChange(fov)|
 |Server|SetPlayerCameraViewDistance(player, distance)|OnCameraViewDistanceChange(distance)|
 |Server|SetPlayerNearClipPlane(player, distance)|OnNearClipPlaneChange(distance)|
+|Server|SetPlayerRotationRate(player, RotationRate)|OnRotationRateChange(RotationRate)|
+|Server|TogglePlayerFirstPersonCamera(player, bToggle)|OnFirstPersonCameraToggle(bToggle)|
 |Server|TogglePlayerMouseCursor(player, bToggle)|OnMouseCursorToggle(bToggle)|
 |Server|TogglePlayerHealthHUD(player, bToggle)|OnHealthHUDToggle(bToggle)|
+|Server|TogglePlayerWeapothHUD(player [, bToggle])|OnWeaponHUDToggle(bToggle)|
 |Server|TogglePlayerLookInput(player [, bToggle])|OnLookInputChange(bToggle)|
 |Server|StopPlayerCameraShake(player [, bImmediate])|OnCameraStopShake(bImmediate)|
 |Server|SetPlayerChatLocation(player, breadth, height)|OnChatLocationChange(breadth, height)|
@@ -53,6 +57,7 @@ The Onset Server Sync package generates mainly server-sided functions that allow
 ### Objects
 |Side|Function|Event|
 |----|-------|--------|
+|Server|LoadPlayerPak(player, PakName, RootPath, ContentPath)|OnLoadPath(PakName, RootPath, ContentPath)|
 |Server|ReplacePlayerObjectModelMesh(player, ModelId, PathToMesh)|OnObjectModelMeshChange(ModelId, PathToMesh)|
 |Server|SetPlayerObjectAnimatedTexture(player, object, TextureFile, Rows, Columns [, MaterialSlot])|OnObjectAnimatedTextureChange(object, TextureFile, Rows, Columns, MaterialSlot)|
 
@@ -69,7 +74,9 @@ The Onset Server Sync package generates mainly server-sided functions that allow
 |Server|SetPlayerSkyRotationSpeed(player, speed)|OnSkyRotationSpeedChange(speed)|
 |Server|SetPlayerStarsBrightness(player, brightness)|OnStarsBrightnessChange(intensity)|
 |Server|SetPlayerMoonShine(player, shine)|OnMoonShineChange(shine)|
+|Server|SetPlayerMoonLightIntensity(player, intensity)|OnMoonLightIntensityChange(intensity)|
 |Server|SetPlayerFogDensity(player, density)|OnFogDensityChange(density)|
+|Server|SetPlayerOceanWaterLevel(player, WaterLevel [, bIncludeSwimmingVolume])|OnOceanWaterLevelChange(WaterLevel, bIncludeSwimmingVolume)|
 |Server|ResetPlayerOceanColor(player)|OnOceanColorReset()|
 
 \* Directs the *client sided* handle, they may vary per client! Use player property values to handle their handles!
