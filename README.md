@@ -6,8 +6,6 @@ ___Do not use this to replace your laziness! If you have a lot of settings to ch
 
 ## Examples (before & after)
 
-### Setting the time globally
-
 #### Before:
 ##### Server:
 ```lua
@@ -27,7 +25,6 @@ AddRemoteEvent("OnTimeUpdate", function(time)
   SetTime(time)
 end)
 ```
-
 #### After:
 ```lua
 local sync = ImportPackage("sync")
@@ -42,6 +39,9 @@ AddCommand("setworldtime", function(player, time)
   end
 end)
 ```
+
+
+
 
 ## Functions
 
