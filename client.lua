@@ -1,98 +1,98 @@
-AddRemoteEvent("OnInputModeChange", function(InputMode)
+AddRemoteEvent("OnSyncInputModeChange", function(InputMode)
 	SetInputMode(InputMode)
 end)
 
-AddRemoteEvent("OnFOVChange", function(fov)
+AddRemoteEvent("OnSyncFOVChange", function(fov)
 	SetCameraFoV(fov)
 end)
 
-AddRemoteEvent("OnWeatherChange", function(weather)
+AddRemoteEvent("OnSyncWeatherChange", function(weather)
 	SetWeather(weather)
 end)
 
-AddRemoteEvent("OnCameraStopShake", function(bImmediate)
+AddRemoteEvent("OnSyncCameraStopShake", function(bImmediate)
 	StopCameraShake(bImmediate)
 end)
 
-AddRemoteEvent("OnSoundDestroy", function(sound)
+AddRemoteEvent("OnSyncSoundDestroy", function(sound)
 	DestroySound(sound)
 end)
 
-AddRemoteEvent("OnTextBoxDestroy", function(textid)
+AddRemoteEvent("OnSyncTextBoxDestroy", function(textid)
 	DestroyTextBox(textid)
 end)
 
-AddRemoteEvent("OnSunRadiusChange", function(radius)
+AddRemoteEvent("OnSyncSunRadiusChange", function(radius)
 	DestroyTextBox(radius)
 end)
 
-AddRemoteEvent("OnChatLocationChange", function(breadth, height)
+AddRemoteEvent("OnSyncChatLocationChange", function(breadth, height)
 	SetChatLocation(breadth, height)
 end)
 
-AddRemoteEvent("OnTimeChange", function(time)
+AddRemoteEvent("OnSyncTimeChange", function(time)
 	SetTime(time)
 end)
 
-AddRemoteEvent("OnSunShineChange", function(shine)
+AddRemoteEvent("OnSyncSunShineChange", function(shine)
 	SetSunShine(shine)
 end)
 
-AddRemoteEvent("OnHealthHUDToggle", function(bToggle)
+AddRemoteEvent("OnSyncHealthHUDToggle", function(bToggle)
 	ShowHealthHUD(bToggle)
 end)
 
-AddRemoteEvent("OnMouseCursorToggle", function(bToggle)
+AddRemoteEvent("OnSyncMouseCursorToggle", function(bToggle)
 	ShowMouseCursor(bToggle)
 end)
 
-AddRemoteEvent("OnSkySaturationChange", function(saturation)
+AddRemoteEvent("OnSyncSkySaturationChange", function(saturation)
 	SetSkySaturation(saturation)
 end)
 
-AddRemoteEvent("OnSkyLightIntensityChange", function(intensity)
+AddRemoteEvent("OnSyncSkyLightIntensityChange", function(intensity)
 	SetSkyLightIntensity(intensity)
 end)
 
-AddRemoteEvent("OnStarsBrightnessChange", function(brightness)
+AddRemoteEvent("OnSyncStarsBrightnessChange", function(brightness)
 	SetStarsBrightness(brightness)
 end)
 
-AddRemoteEvent("OnOceanColorReset", function()
+AddRemoteEvent("OnSyncOceanColorReset", function()
 	ResetOceanColor()
 end)
 
-AddRemoteEvent("OnFogDensityChange", function(density)
+AddRemoteEvent("OnSyncFogDensityChange", function(density)
 	SetFogDensity(density)
 end)
 
-AddRemoteEvent("OnSkyRotationSpeedChange", function(speed)
+AddRemoteEvent("OnSyncSkyRotationSpeedChange", function(speed)
 	SetSkyRotationSpeed(speed)
 end)
 
-AddRemoteEvent("OnSunLightIntensityChange", function(intensity)
+AddRemoteEvent("OnSyncSunLightIntensityChange", function(intensity)
 	SetSunLightIntensity(intensity)
 end)
 
-AddRemoteEvent("OnChatToggle", function(bToggle)
+AddRemoteEvent("OnSyncChatToggle", function(bToggle)
 	ShowChat(bToggle)
 end)
 
-AddRemoteEvent("OnWebUIDestroy", function(web)
+AddRemoteEvent("OnSyncWebUIDestroy", function(web)
 	DestroyWebUI(web)
 end)
 
-AddRemoteEvent("OnNPCOutlineChange", function(bToggle)
+AddRemoteEvent("OnSyncNPCOutlineChange", function(bToggle)
 	SetNPCOutline(npc, bToggle)
 end)
 
-AddRemoteEvent("OnPlayerClothingPresetChange", function(player, clothing_preset)
+AddRemoteEvent("OnSyncPlayerClothingPresetChange", function(player, clothing_preset)
 	SetPlayerClothingPreset(player, clothing_preset)
 
 	SetPlayerPropertyValue(GetPlayerId(), "player_clothing_" .. tostring(player), clothing_preset)
 end)
 
-AddEvent("OnPlayerStreamIn", function(player)
+AddEvent("OnSyncPlayerStreamIn", function(player)
 	local clothing_preset = GetPlayerPropertyValue(GetPlayerId(), "player_clothing_" .. tostring(player))
 
 	if(clothing_preset ~= nil) then
@@ -100,61 +100,61 @@ AddEvent("OnPlayerStreamIn", function(player)
 	end
 end)
 
-AddRemoteEvent("OnPlayerOutlineChange", function(bToggle)
+AddRemoteEvent("OnSyncPlayerOutlineChange", function(bToggle)
 	SetPlayerOutline(player, bToggle)
 end)
 
-AddRemoteEvent("OnControlRotationChange", function(pitch, yaw, roll)
+AddRemoteEvent("OnSyncControlRotationChange", function(pitch, yaw, roll)
 	SetControlRotation(pitch, yaw, roll)
 end)
 
-AddRemoteEvent("OnMoveInputChange", function(bToggle) 
+AddRemoteEvent("OnSyncMoveInputChange", function(bToggle) 
 	SetIgnoreMoveInput(bToggle)
 end)
 
-AddRemoteEvent("OnLookInputChange", function(bToggle) 
+AddRemoteEvent("OnSyncLookInputChange", function(bToggle) 
 	SetIgnoreLookInput(bToggle)
 end)
 
-AddRemoteEvent("OnCameraStopFade", function() 
+AddRemoteEvent("OnSyncCameraStopFade", function() 
 	StopCameraFade()
 end)
 
-AddRemoteEvent("OnMoonShineChange", function(shine) 
+AddRemoteEvent("OnSyncMoonShineChange", function(shine) 
 	SetMoonShine(shine)
 end)
 
-AddRemoteEvent("OnNearClipPlaneChange", function(clip) 
+AddRemoteEvent("OnSyncNearClipPlaneChange", function(clip) 
 	SetNearClipPlane(clip)
 end)
 
-AddRemoteEvent("OnSunAzimuthChange", function(azimuth) 
+AddRemoteEvent("OnSyncSunAzimuthChange", function(azimuth) 
 	SetSunAzimuth(azimuth)
 end)
 
-AddRemoteEvent("OnWaypointDestroy", function(waypointid) 
+AddRemoteEvent("OnSyncWaypointDestroy", function(waypointid) 
 	DestroyWaypoint(waypointid)
 end)
 
-AddRemoteEvent("OnObjectModelMeshChange", function(ModelId, PathToMesh) 
+AddRemoteEvent("OnSyncObjectModelMeshChange", function(ModelId, PathToMesh) 
 	ReplaceObjectModelMesh(ModelId, PathToMesh)
 end)
 
-AddRemoteEvent("OnMoonRadiusChange", function(radius) 
+AddRemoteEvent("OnSyncMoonRadiusChange", function(radius) 
 	SetMoonRadius(radius)
 end)
 
-AddRemoteEvent("OnCameraViewDistanceChange", function(distance) 
+AddRemoteEvent("OnSyncCameraViewDistanceChange", function(distance) 
 	SetCameraViewDistance(distance)
 end)
 
-AddRemoteEvent("OnNPCCClothingPresetChange", function(npc, clothing_preset)
+AddRemoteEvent("OnSyncNPCCClothingPresetChange", function(npc, clothing_preset)
 	SetNPCClothingPreset(npc, clothing_preset)
 
 	SetPlayerPropertyValue(GetPlayerId(), "npc_clothing_" .. tostring(npcc), clothing_preset)
 end)
 
-AddEvent("OnNPCStreamIn", function(npc)
+AddEvent("OnSyncNPCStreamIn", function(npc)
 	local clothing_preset = GetPlayerPropertyValue(GetPlayerId(), "npc_clothing_" .. tostring(npc))
 
 	if(clothing_preset ~= nil) then
@@ -162,54 +162,54 @@ AddEvent("OnNPCStreamIn", function(npc)
 	end
 end)
 
-AddRemoteEvent("OnObjectAnimatedTextureChange", function(object, TextureFile, Rows, Columns, MaterialSlot) 
+AddRemoteEvent("OnSyncObjectAnimatedTextureChange", function(object, TextureFile, Rows, Columns, MaterialSlot) 
 	SetObjectAnimatedTexture(object, TextureFile, Rows, Columns, MaterialSlot)
 end)
 
-AddRemoteEvent("OnMoonLightIntensityChange", function(intensity) 
+AddRemoteEvent("OnSyncMoonLightIntensityChange", function(intensity) 
 	SetMoonLightIntensity(intensity)
 end)
 
-AddRemoteEvent("OnServerChange", function(Address, Port, Password)
+AddRemoteEvent("OnSyncServerChange", function(Address, Port, Password)
 	ConnectToServer(Address, Port, Password)
 end)
 
-AddRemoteEvent("OnWeaponHUDToggle", function(bToggle)
+AddRemoteEvent("OnSyncWeaponHUDToggle", function(bToggle)
 	ShowWeaponHUD(bToggle)
 end)
 
-AddRemoteEvent("OnLoadPak", function(PakName, RootPath, ContentPath)
+AddRemoteEvent("OnSyncLoadPak", function(PakName, RootPath, ContentPath)
 	LoadPak(PakName, RootPath, ContentPath)
 end)
 
-AddRemoteEvent("OnOceanWaterLevelChange", function(Level, bIncludeSwimmingVolume)
+AddRemoteEvent("OnSyncOceanWaterLevelChange", function(Level, bIncludeSwimmingVolume)
 	SetOceanWaterLevel(Level, bIncludeSwimmingVolume)
 end)
 
-AddRemoteEvent("OnFirstPersonCameraToggle", function(bToggle)
+AddRemoteEvent("OnSyncFirstPersonCameraToggle", function(bToggle)
 	EnableFirstPersonCamera(bToggle)
 end)
 
-AddRemoteEvent("OnRotationRateChange", function(RotationRate)
+AddRemoteEvent("OnSyncRotationRateChange", function(RotationRate)
 	SetPlayerRotationRate(RotationRate)
 end)
 
-AddRemoteEvent("OnFireworksSpawn", function(modelid, x, y, z, rx, ry, rz)
+AddRemoteEvent("OnSyncFireworksSpawn", function(modelid, x, y, z, rx, ry, rz)
 	CreateFireworks(modelid, x, y, z, rx, ry, rz)
 end)
 
-AddRemoteEvent("OnSoundPitchUpdate", function(sound, Pitch)
+AddRemoteEvent("OnSyncSoundPitchUpdate", function(sound, Pitch)
 	SetSoundPitch(sound, Pitch)
 end)
 
-AddRemoteEvent("OnControllerOrientedMovementChange", function(bToggle)
+AddRemoteEvent("OnSyncControllerOrientedMovementChange", function(bToggle)
 	SetControllerOrientedMovement(bToggle)
 end)
 
-AddRemoteEvent("OnObjectEditorSpeedChange", function(speed)
+AddRemoteEvent("OnSyncObjectEditorSpeedChange", function(speed)
 	SetObjectEditorSpeed(speed)
 end)
 
-AddRemoteEvent("OnObjectHitEventsToggle", function(object, bToggle)
+AddRemoteEvent("OnSyncObjectHitEventsToggle", function(object, bToggle)
 	EnableObjectHitEvents(object, bToggle)
 end)

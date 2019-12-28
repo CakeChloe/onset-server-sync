@@ -5,7 +5,7 @@ AddFunctionExport("SetPlayerInputMode", function(player, InputMode)
 		return false
 	end
 
-	return CallRemoteEvent(player, "OnInputModeChange", InputMode)
+	return CallRemoteEvent(player, "OnSyncInputModeChange", InputMode)
 end)
 
 -- End of SetPlayerInputMode
@@ -20,7 +20,7 @@ AddFunctionExport("SetPlayerFOV", function(player, fov)
 		return false
 	end
 
-	return CallRemoteEvent(player, "OnFOVChange", fov)
+	return CallRemoteEvent(player, "OnSyncFOVChange", fov)
 end)
 
 -- End of SetPlayerFOV
@@ -35,7 +35,7 @@ AddFunctionExport("SetPlayerWeather", function(player, weather)
 		return false
 	end
 
-	return CallRemoteEvent(player, "OnWeatherChange", weather)
+	return CallRemoteEvent(player, "OnSyncWeatherChange", weather)
 end)
 
 -- End Of SetPlayerWeather
@@ -49,7 +49,7 @@ AddFunctionExport("StopPlayerCameraShake", function(player, bImmediate)
 		return false
 	end
 
-	return CallRemoteEvent(player, "OnCameraStopShake", bImmediate)
+	return CallRemoteEvent(player, "OnSyncCameraStopShake", bImmediate)
 end)
 
 -- End Of StopPlayerCameraShake
@@ -61,7 +61,7 @@ AddFunctionExport("DestroyPlayerSound", function(player, sound)
 		return false
 	end
 
-	return CallRemoteEvent(player, "OnSoundDestroy", sound)
+	return CallRemoteEvent(player, "OnSyncSoundDestroy", sound)
 end)
 
 -- End Of DestroyPlayerSound
@@ -73,7 +73,7 @@ AddFunctionExport("DestroyPlayerTextBox", function(player, textid)
 		return false
 	end
 
-	return CallRemoteEvent(player, "OnTextBoxDestroy", textid)
+	return CallRemoteEvent(player, "OnSyncTextBoxDestroy", textid)
 end)
 
 -- End Of DestroyPlayerTextBox
@@ -88,7 +88,7 @@ AddFunctionExport("SetPlayerSunRadius", function(player, radius)
 		return false
 	end
 
-	return CallRemoteEvent(player, "OnSunRadiusChange", radius)
+	return CallRemoteEvent(player, "OnSyncSunRadiusChange", radius)
 end)
 
 -- End Of SetPlayerSunRadius
@@ -100,7 +100,7 @@ AddFunctionExport("SetPlayerChatLocation", function(player, breadth, height)
 		return false
 	end
 
-	return CallRemoteEvent(player, "OnChatLocationChange", breadth, height)
+	return CallRemoteEvent(player, "OnSyncChatLocationChange", breadth, height)
 end)
 
 -- End Of SetPlayerChatLocation
@@ -115,7 +115,7 @@ AddFunctionExport("SetPlayerTime", function(player, time)
 		return false
 	end
 
-	return CallRemoteEvent(player, "OnTimeChange", time)
+	return CallRemoteEvent(player, "OnSyncTimeChange", time)
 end)
 
 -- End Of SetPlayerTime
@@ -130,7 +130,7 @@ AddFunctionExport("SetPlayerSunShine", function(player, shine)
 		return false
 	end
 
-	return CallRemoteEvent(player, "OnSunShineChange", shine)
+	return CallRemoteEvent(player, "OnSyncSunShineChange", shine)
 end)
 
 -- End Of SetPlayerSunShine
@@ -142,7 +142,7 @@ AddFunctionExport("TogglePlayerHealthHUD", function(player, bToggle)
 		return false
 	end
 
-	return CallRemoteEvent(player, "OnHealthHUDToggle", bToggle)
+	return CallRemoteEvent(player, "OnSyncHealthHUDToggle", bToggle)
 end)
 
 -- End Of TogglePlayerHealthHUD
@@ -154,7 +154,7 @@ AddFunctionExport("TogglePlayerMouseCursor", function(player, bToggle)
 		return false
 	end
 
-	return CallRemoteEvent(player, "OnMouseCursorToggle", bToggle)
+	return CallRemoteEvent(player, "OnSyncMouseCursorToggle", bToggle)
 end)
 
 -- End Of TogglePlayerMouseCursor
@@ -169,7 +169,7 @@ AddFunctionExport("SetPlayerSkySaturation", function(player, saturation)
 		return false
 	end
 
-	return CallRemoteEvent(player, "OnSkySaturationChange", saturation)
+	return CallRemoteEvent(player, "OnSyncSkySaturationChange", saturation)
 end)
 
 -- End Of SetPlayerSkySaturation
@@ -184,7 +184,7 @@ AddFunctionExport("SetPlayerSkyIntesity", function(player, intensity)
 		return false
 	end
 
-	return CallRemoteEvent(player, "OnSkyIntensityChange", intensity)
+	return CallRemoteEvent(player, "OnSyncSkyIntensityChange", intensity)
 end)
 
 -- End Of SetPlayerSkyIntesity
@@ -199,7 +199,7 @@ AddFunctionExport("SetPlayerStarsBrightness", function(player, brightness)
 		return false
 	end
 
-	return CallRemoteEvent(player, "OnSkyBrightnessChange", brightness)
+	return CallRemoteEvent(player, "OnSyncSkyBrightnessChange", brightness)
 end)
 
 -- End Of SetPlayerStarsBrightness
@@ -211,7 +211,7 @@ AddFunctionExport("ResetPlayerOceanColor", function(player)
 		return false
 	end
 
-	return CallRemoteEvent(player, "OnOceanColorReset")
+	return CallRemoteEvent(player, "OnSyncOceanColorReset")
 end)
 
 -- End Of ResetPlayerOceanColor
@@ -226,7 +226,7 @@ AddFunctionExport("SetPlayerFogDensity", function(player, density)
 		return false
 	end
 
-	return CallRemoteEvent(player, "OnFogDensityChange", density)
+	return CallRemoteEvent(player, "OnSyncFogDensityChange", density)
 end)
 
 -- End Of SetPlayerFogDensity
@@ -241,7 +241,7 @@ AddFunctionExport("SetPlayerSkyRotationSpeed", function(player, speed)
 		return false
 	end
 
-	return CallRemoteEvent(player, "OnSkyRotationSpeedChange", speed)
+	return CallRemoteEvent(player, "OnSyncSkyRotationSpeedChange", speed)
 end)
 
 -- End Of SetPlayerSkyRotationSpeed
@@ -256,7 +256,7 @@ AddFunctionExport("SetPlayerSunLightIntensity", function(player, intensity)
 		return false
 	end
 
-	return CallRemoteEvent(player, "OnSunLightIntensityChange", intensity)
+	return CallRemoteEvent(player, "OnSyncSunLightIntensityChange", intensity)
 end)
 
 -- End Of SetPlayerSunLightIntensity
@@ -268,7 +268,7 @@ AddFunctionExport("TogglePlayerChat", function(player, bToggle)
 		return false
 	end
 
-	return CallRemoteEvent(player, "OnChatToggle", bToggle)
+	return CallRemoteEvent(player, "OnSyncChatToggle", bToggle)
 end)
 
 -- End Of TogglePlayerChat
@@ -280,7 +280,7 @@ AddFunctionExport("DestroyPlayerWebUI", function(player, web)
 		return false
 	end
 
-	return CallRemoteEvent(player, "OnWebUIDestroy", web)
+	return CallRemoteEvent(player, "OnSyncWebUIDestroy", web)
 end)
 
 -- End Of DestroyPlayerWebUI
@@ -294,7 +294,7 @@ AddFunctionExport("TogglePlayerNPCOutline", function(player, npc, bToggle)
 		return false
 	end
 
-	return CallRemoteEvent(player, "OnNPCOutlineChange", npc, bToggle)
+	return CallRemoteEvent(player, "OnSyncNPCOutlineChange", npc, bToggle)
 end)
 
 -- End Of TogglePlayerNPCOutline
@@ -306,7 +306,7 @@ AddFunctionExport("SetPlayerClothingPreset", function(player, forplayer, clothin
 		return false
 	end
 
-	return CallRemoteEvent(forplayer, "OnPlayerClothingPresetChange", player, clothing_preset)
+	return CallRemoteEvent(forplayer, "OnSyncPlayerClothingPresetChange", player, clothing_preset)
 end)
 
 -- End Of SetPlayerClothingPreset
@@ -318,7 +318,7 @@ AddFunctionExport("SetPlayerNPCClothingPreset", function(player, npc, clothing_p
 		return false
 	end
 
-	return CallRemoteEvent(player, "OnNPCClothingPresetChange", npc, clothing_preset)
+	return CallRemoteEvent(player, "OnSyncNPCClothingPresetChange", npc, clothing_preset)
 end)
 
 -- End Of SetPlayerNPCClothingPreset
@@ -332,7 +332,7 @@ AddFunctionExport("TogglePlayerOutline", function(player, forplayer, bToggle)
 		return false
 	end
 
-	return CallRemoteEvent(forplayer, "OnPlayerOutlineChange", player, bToggle)
+	return CallRemoteEvent(forplayer, "OnSyncPlayerOutlineChange", player, bToggle)
 end)
 
 -- End Of TogglePlayerOutline
@@ -344,7 +344,7 @@ AddFunctionExport("SetPlayerControlRotation", function(player, pitch, yaw, roll)
 		return false
 	end
 
-	return CallRemoteEvent(player, "OnControlRotationChange", pitch, yaw, roll)
+	return CallRemoteEvent(player, "OnSyncControlRotationChange", pitch, yaw, roll)
 end)
 
 -- End Of SetPlayerControlRotation
@@ -358,7 +358,7 @@ AddFunctionExport("TogglePlayerMoveInput", function(player, bToggle)
 		return false
 	end
 
-	return CallRemoteEvent(player, "OnMoveInputChange", bToggle)
+	return CallRemoteEvent(player, "OnSyncMoveInputChange", bToggle)
 end)
 
 -- End Of TogglePlayerMoveInput
@@ -372,7 +372,7 @@ AddFunctionExport("TogglePlayerLookInput", function(player, bToggle)
 		return false
 	end
 
-	return CallRemoteEvent(player, "OnLookInputChange", bToggle)
+	return CallRemoteEvent(player, "OnSyncLookInputChange", bToggle)
 end)
 
 -- End Of TogglePlayerLookInput
@@ -384,7 +384,7 @@ AddFunctionExport("StopPlayerCameraFade", function(player)
 		return false
 	end
 
-	return CallRemoteEvent(player, "OnCameraStopFade")
+	return CallRemoteEvent(player, "OnSyncCameraStopFade")
 end)
 
 -- End Of StopPlayerCameraFade
@@ -399,7 +399,7 @@ AddFunctionExport("SetPlayerMoonShine", function(player, shine)
 		return false
 	end
 
-	return CallRemoteEvent(player, "OnMoonShineChange", shine)
+	return CallRemoteEvent(player, "OnSyncMoonShineChange", shine)
 end)
 
 -- End Of SetPlayerMoonShine
@@ -411,7 +411,7 @@ AddFunctionExport("SetPlayerNearClipPlane", function(player, distance)
 		return false
 	end
 
-	return CallRemoteEvent(player, "OnNearClipPlaneChange", distance)
+	return CallRemoteEvent(player, "OnSyncNearClipPlaneChange", distance)
 end)
 
 -- End Of SetPlayerNearClipPlane
@@ -423,7 +423,7 @@ AddFunctionExport("SetPlayerSunAzimuth", function(player, azimuth)
 		return false
 	end
 
-	return CallRemoteEvent(player, "OnSunAzmithChange", azimuth)
+	return CallRemoteEvent(player, "OnSyncSunAzmithChange", azimuth)
 end)
 
 -- End Of SetPlayerSunAzimuth
@@ -435,7 +435,7 @@ AddFunctionExport("DestroyPlayerWaypoint", function(player, waypointid)
 		return false
 	end
 
-	return CallRemoteEvent(player, "OnWaypointDestroy", waypointid)
+	return CallRemoteEvent(player, "OnSyncWaypointDestroy", waypointid)
 end)
 
 -- End Of DestroyPlayerWaypoint
@@ -447,7 +447,7 @@ AddFunctionExport("ReplacePlayerObjectModelMesh", function(player, ModelId, Path
 		return false
 	end
 
-	return CallRemoteEvent(player, "OnObjectModelMeshChange", ModelId, PathToMEsh)
+	return CallRemoteEvent(player, "OnSyncObjectModelMeshChange", ModelId, PathToMEsh)
 end)
 
 -- End Of ReplacePlayerObjectModelMesh
@@ -462,7 +462,7 @@ AddFunctionExport("SetPlayerMoonRadius", function(player, radius)
 		return false
 	end
 
-	return CallRemoteEvent(player, "OnMoonRadiusChange", radius)
+	return CallRemoteEvent(player, "OnSyncMoonRadiusChange", radius)
 end)
 
 -- End Of SetPlayerMoonRadius
@@ -474,7 +474,7 @@ AddFunctionExport("SetPlayerCameraViewDistance", function(player, distance)
 		return false
 	end
 
-	return CallRemoteEvent(player, "OnCameraViewDistanceChange", distance)
+	return CallRemoteEvent(player, "OnSyncCameraViewDistanceChange", distance)
 end)
 
 -- End Of SetPlayerCameraViewDistance
@@ -488,7 +488,7 @@ AddFunctionExport("SetPlayerObjectAnimatedTexture", function(player, object, Tex
 		return false
 	end
 
-	return CallRemoteEvent(player, "OnObjectAnimatedTextureChange", object, TextureFile, Rows, Columns, MaterialSlot)
+	return CallRemoteEvent(player, "OnSyncObjectAnimatedTextureChange", object, TextureFile, Rows, Columns, MaterialSlot)
 end)
 
 -- End Of SetPlayerObjectAnimatedTexture
@@ -503,7 +503,7 @@ AddFunctionExport("SetPlayerMoonIntensity", function(player, intensity)
 		return false
 	end
 
-	return CallRemoteEvent(player, "OnMoonIntensityChange", intensity)
+	return CallRemoteEvent(player, "OnSyncMoonIntensityChange", intensity)
 end)
 
 -- End Of SetPlayerMoonIntensity
@@ -517,7 +517,7 @@ AddFunctionExport("ConnectPlayerToServer", function(player, Address, Port, Passw
 		return false
 	end
 
-	return CallRemoteEvent(player, "OnServerChange", Address, Port, Password)
+	return CallRemoteEvent(player, "OnSyncServerChange", Address, Port, Password)
 end)
 
 -- End Of ConnectPlayerToServer
@@ -531,7 +531,7 @@ AddFunctionExport("TogglePlayerWeaponHUD", function(player, bToggle)
 		return false
 	end
 
-	return CallRemoteEvent(player, "OnWeaponHUDToggle", bToggle)
+	return CallRemoteEvent(player, "OnSyncWeaponHUDToggle", bToggle)
 end)
 
 -- End Of TogglePlayerWeaponHUD
@@ -543,7 +543,7 @@ AddFunctionExport("LoadPlayerPak", function(player, PakName, RootPath, ContentPa
 		return false
 	end
 
-	return CallRemoteEvent(player, "OnLoadPak", PakName, RootPath, ContentPath)
+	return CallRemoteEvent(player, "OnSyncLoadPak", PakName, RootPath, ContentPath)
 end)
 
 -- End Of LoadPlayerPak
@@ -560,7 +560,7 @@ AddFunctionExport("SetPlayerOceanWaterLevel", function(player, Level, bIncludeSw
 		return false
 	end
 
-	return CallRemoteEvent(player, "OnOceanWaterLevelChange", Level, bIncludeSwimmingVolume)
+	return CallRemoteEvent(player, "OnSyncOceanWaterLevelChange", Level, bIncludeSwimmingVolume)
 end)
 
 -- End Of SetPlayerOceanWaterLevel
@@ -574,7 +574,7 @@ AddFunctionExport("TogglePlayerFirstPersonCamera", function(player, bToggle)
 		return false
 	end
 
-	return CallRemoteEvent(player, "OnFirstPersonCameraToggle", bToggle)
+	return CallRemoteEvent(player, "OnSyncFirstPersonCameraToggle", bToggle)
 end)
 
 -- End Of TogglePlayerFirstPersonCamera
@@ -589,7 +589,7 @@ AddFunctionExport("SetPlayerRotationRate", function(player, RotationRate)
 		return false
 	end
 
-	return CallRemoteEvent(player, "OnRotationRateChange", RotationRate)
+	return CallRemoteEvent(player, "OnSyncRotationRateChange", RotationRate)
 end)
 
 -- End Of SetPlayerRotationRate
@@ -608,7 +608,7 @@ AddFunctionExport("CreatePlayerFireworks", function(player, modelid, x, y, z, rx
 		return false
 	end
 
-	return CallRemoteEvent(player, "OnFireworksSpawn", modelid, x, y, z, rx, ry, rz)
+	return CallRemoteEvent(player, "OnSyncFireworksSpawn", modelid, x, y, z, rx, ry, rz)
 end)
 
 -- End Of CreatePlayerFireworks
@@ -620,7 +620,7 @@ AddFunctionExport("SetPlayerSoundPitch", function(player, sound, Pitch)
 		return false
 	end
 
-	return CallRemoteEvent(player, "OnSoundPitchUpdate", sound, Pitch)
+	return CallRemoteEvent(player, "OnSyncSoundPitchUpdate", sound, Pitch)
 end)
 
 -- End Of SetPlayerSoundPitch
@@ -634,7 +634,7 @@ AddFunctionExport("SetPlayerControllerOrientedMovement", function(player, bToggl
 		return false
 	end
 
-	return CallRemoteEvent(player, "OnControllerOrientedMovementChange", bToggle)
+	return CallRemoteEvent(player, "OnSyncControllerOrientedMovementChange", bToggle)
 end)
 
 -- End Of SetPlayerControllerOrientedMovement
@@ -646,7 +646,7 @@ AddFunctionExport("SetPlayerObjectEditorSpeed", function(player, speed)
 		return false
 	end
 
-	return CallRemoteEvent(player, "OnObjectEditorSpeedChange", speed)
+	return CallRemoteEvent(player, "OnSyncObjectEditorSpeedChange", speed)
 end)
 
 -- End Of SetPlayerObjectEditorSpeed
@@ -660,7 +660,7 @@ AddFunctionExport("TogglePlayerObjectHitEvents", function(player, object, bToggl
 		return false
 	end
 
-	return CallRemoteEvent(player, "OnObjectHitEventsToggle", object, bToggle)
+	return CallRemoteEvent(player, "OnSyncObjectHitEventsToggle", object, bToggle)
 end)
 
 -- End Of TogglePlayerObjectHitEvents
