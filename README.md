@@ -21,7 +21,7 @@ AddCommand("setworldtime", function(player, time)
   end
 end)
 ```
-#### Client:
+##### Client:
 ```lua
 AddRemoteEvent("OnTimeUpdate", function(time)
   SetTime(time)
