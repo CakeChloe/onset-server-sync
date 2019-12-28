@@ -15,13 +15,13 @@ AddCommand("setworldtime", function(player, time)
   end
   
   for _, target in pairs(GetAllPlayers()) do
-    CallRemoteEvent(target, "OnTimeChange", time)
+    CallRemoteEvent(target, "OnSyncTimeChange", time)
   end
 end)
 ```
 ##### Client:
 ```lua
-AddRemoteEvent("OnTimeUpdate", function(time)
+AddRemoteEvent("OnSyncTimeUpdate", function(time)
   SetTime(time)
 end)
 ```
@@ -48,82 +48,82 @@ end)
 ### Keys
 |Side|Function|Event|
 |----|-------|--------|
-|Server|ConnectPlayerToServer(player, Address, Port [, Password])|OnServerchange(Address, Port, Password)|
-|Server|SetPlayerInputMode(player, InputMode)|OnInputModeChange(InputMode)|
+|Server|ConnectPlayerToServer(player, Address, Port [, Password])|OnSyncServerchange(Address, Port, Password)|
+|Server|SetPlayerInputMode(player, InputMode)|OnSyncInputModeChange(InputMode)|
 
 ### Waypoints
 |Side|Function|Event|
 |----|-------|--------|
-|Server|DestroyPlayerWaypoint(player, waypointid) \*|OnWaypointDestroy(waypointid)|
+|Server|DestroyPlayerWaypoint(player, waypointid) \*|OnSyncWaypointDestroy(waypointid)|
 
 ### Players and NPCs
 |Side|Function|Event|
 |----|-------|--------|
-|Server|TogglePlayerNPCOutline(player, npc [, bToggle])|OnNPCOutlineChange(npc, bToggle)|
-|Server|SetPlayerNPCClothingPreset(player, npc, clothing_preset) \*\*|OnNPCClothingPresetChange(npc, clothing_preset)|
-|Server|TogglePlayerOutline(player, forplayer [, bToggle])|OnPlayerOutlineChange(player, bToggle)|
-|Server|TogglePlayerMoveInput(player [, bToggle])|OnMoveInputChange(bToggle)|
-|Server|SetPlayerClothingPreset(player, forplayer, clothing_preset) \*\*|OnPlayerClothingPresetChange(player, clothing_preset)|
+|Server|TogglePlayerNPCOutline(player, npc [, bToggle])|OnSyncNPCOutlineChange(npc, bToggle)|
+|Server|SetPlayerNPCClothingPreset(player, npc, clothing_preset) \*\*|OnSyncNPCClothingPresetChange(npc, clothing_preset)|
+|Server|TogglePlayerOutline(player, forplayer [, bToggle])|OnSyncPlayerOutlineChange(player, bToggle)|
+|Server|TogglePlayerMoveInput(player [, bToggle])|OnSyncMoveInputChange(bToggle)|
+|Server|SetPlayerClothingPreset(player, forplayer, clothing_preset) \*\*|OnSyncPlayerClothingPresetChange(player, clothing_preset)|
 
 ### Camera
 |Side|Function|Event|
 |----|-------|--------|
-|Server|SetPlayerFOV(player, fov)|OnFOVChange(fov)|
-|Server|SetPlayerCameraViewDistance(player, distance)|OnCameraViewDistanceChange(distance)|
-|Server|SetPlayerNearClipPlane(player, distance)|OnNearClipPlaneChange(distance)|
-|Server|SetPlayerControllerOrientedMovement(player [, bToggle])|OnControllerOrientedMovementChange(bToggle)|
-|Server|SetPlayerRotationRate(player, RotationRate)|OnRotationRateChange(RotationRate)|
-|Server|TogglePlayerFirstPersonCamera(player, bToggle)|OnFirstPersonCameraToggle(bToggle)|
-|Server|TogglePlayerMouseCursor(player, bToggle)|OnMouseCursorToggle(bToggle)|
-|Server|TogglePlayerHealthHUD(player, bToggle)|OnHealthHUDToggle(bToggle)|
-|Server|TogglePlayerWeapothHUD(player [, bToggle])|OnWeaponHUDToggle(bToggle)|
-|Server|TogglePlayerLookInput(player [, bToggle])|OnLookInputChange(bToggle)|
-|Server|StopPlayerCameraShake(player [, bImmediate])|OnCameraStopShake(bImmediate)|
-|Server|SetPlayerChatLocation(player, breadth, height)|OnChatLocationChange(breadth, height)|
+|Server|SetPlayerFOV(player, fov)|OnSyncFOVChange(fov)|
+|Server|SetPlayerCameraViewDistance(player, distance)|OnSyncCameraViewDistanceChange(distance)|
+|Server|SetPlayerNearClipPlane(player, distance)|OnSyncNearClipPlaneChange(distance)|
+|Server|SetPlayerControllerOrientedMovement(player [, bToggle])|OnSyncControllerOrientedMovementChange(bToggle)|
+|Server|SetPlayerRotationRate(player, RotationRate)|OnSyncRotationRateChange(RotationRate)|
+|Server|TogglePlayerFirstPersonCamera(player, bToggle)|OnSyncFirstPersonCameraToggle(bToggle)|
+|Server|TogglePlayerMouseCursor(player, bToggle)|OnSyncMouseCursorToggle(bToggle)|
+|Server|TogglePlayerHealthHUD(player, bToggle)|OnSyncHealthHUDToggle(bToggle)|
+|Server|TogglePlayerWeapothHUD(player [, bToggle])|OnSyncWeaponHUDToggle(bToggle)|
+|Server|TogglePlayerLookInput(player [, bToggle])|OnSyncLookInputChange(bToggle)|
+|Server|StopPlayerCameraShake(player [, bImmediate])|OnSyncCameraStopShake(bImmediate)|
+|Server|SetPlayerChatLocation(player, breadth, height)|OnSyncChatLocationChange(breadth, height)|
 
 ### Web UI
 |Side|Function|Event|
 |----|-------|--------|
-|Server|DestroyPlayerWebUI(player, web) \*|OnWebUIDestroy(web)|
+|Server|DestroyPlayerWebUI(player, web) \*|OnSyncWebUIDestroy(web)|
 
 ### Sounds
 |Side|Function|Event|
 |----|-------|--------|
-|Server|SetPlayerSoundPitch(player, sound, Pitch) \*|OnSoundPitchUpdate(sound, Pitch)|
-|Server|DestroyPlayerSound(player, sound) \*|OnSoundDestroy(sound)|
+|Server|SetPlayerSoundPitch(player, sound, Pitch) \*|OnSyncSoundPitchUpdate(sound, Pitch)|
+|Server|DestroyPlayerSound(player, sound) \*|OnSyncSoundDestroy(sound)|
 
 ### Text Boxes
 |Side|Function|Event|
 |----|-------|--------|
-|Server|DestroyPlayerTextBox(player, textid) \*|OnTextBoxDestroy(textid)|
+|Server|DestroyPlayerTextBox(player, textid) \*|OnSyncTextBoxDestroy(textid)|
 
 ### Objects
 |Side|Function|Event|
 |----|-------|--------|
-|Server|SetPlayerObjectEditorSpeed(player, speed)|OnObjectEditorSpeedChange(speed)|
-|Server|TogglePlayerObjectHitEvents(player, object [, bToggle])|OnObjectHitEventsToggle(object, bToggle)|
-|Server|LoadPlayerPak(player, PakName, RootPath, ContentPath)|OnLoadPath(PakName, RootPath, ContentPath)|
-|Server|ReplacePlayerObjectModelMesh(player, ModelId, PathToMesh)|OnObjectModelMeshChange(ModelId, PathToMesh)|
-|Server|SetPlayerObjectAnimatedTexture(player, object, TextureFile, Rows, Columns [, MaterialSlot])|OnObjectAnimatedTextureChange(object, TextureFile, Rows, Columns, MaterialSlot)|
+|Server|SetPlayerObjectEditorSpeed(player, speed)|OnSyncObjectEditorSpeedChange(speed)|
+|Server|TogglePlayerObjectHitEvents(player, object [, bToggle])|OnSyncObjectHitEventsToggle(object, bToggle)|
+|Server|LoadPlayerPak(player, PakName, RootPath, ContentPath)|OnSyncLoadPath(PakName, RootPath, ContentPath)|
+|Server|ReplacePlayerObjectModelMesh(player, ModelId, PathToMesh)|OnSyncObjectModelMeshChange(ModelId, PathToMesh)|
+|Server|SetPlayerObjectAnimatedTexture(player, object, TextureFile, Rows, Columns [, MaterialSlot])|OnSyncObjectAnimatedTextureChange(object, TextureFile, Rows, Columns, MaterialSlot)|
 
 ### Environment
 |Side|Function|Event|
 |----|-------|--------|
-|Server|CreatePlayerFireworks(player, modelid, x, y, z [, rx, ry, rz])|OnFireworksSpawn(modelid, x, y, z, rx, ry, rz)|
-|Server|SetPlayerTime(player, time)|OnTimeChange(time)|
-|Server|SetPlayerSunAzimuth(player, azimuth)|OnSunAzimuthChange(azimuth)|)|
-|Server|SetPlayerSunRadius(player, radius)|OnSunRadiusChange(radius)|
-|Server|SetPlayerSunShine(player, shine)|OnSunShineChange(shine)|
-|Server|SetPlayerSunLightIntensity(player, intensity)|OnSunLightIntensityChange(intensity)|
-|Server|SetPlayerSkySaturation(player, saturation)|OnSkySaturationChange(saturation)|
-|Server|SetPlayerSkyLightIntensity(player, intensity)|OnSkyLightIntensityChange(intensity)|
-|Server|SetPlayerSkyRotationSpeed(player, speed)|OnSkyRotationSpeedChange(speed)|
-|Server|SetPlayerStarsBrightness(player, brightness)|OnStarsBrightnessChange(intensity)|
-|Server|SetPlayerMoonShine(player, shine)|OnMoonShineChange(shine)|
-|Server|SetPlayerMoonLightIntensity(player, intensity)|OnMoonLightIntensityChange(intensity)|
-|Server|SetPlayerFogDensity(player, density)|OnFogDensityChange(density)|
-|Server|SetPlayerOceanWaterLevel(player, WaterLevel [, bIncludeSwimmingVolume])|OnOceanWaterLevelChange(WaterLevel, bIncludeSwimmingVolume)|
-|Server|ResetPlayerOceanColor(player)|OnOceanColorReset()|
+|Server|CreatePlayerFireworks(player, modelid, x, y, z [, rx, ry, rz])|OnSyncFireworksSpawn(modelid, x, y, z, rx, ry, rz)|
+|Server|SetPlayerTime(player, time)|OnSyncTimeChange(time)|
+|Server|SetPlayerSunAzimuth(player, azimuth)|OnSyncSunAzimuthChange(azimuth)|)|
+|Server|SetPlayerSunRadius(player, radius)|OnSyncSunRadiusChange(radius)|
+|Server|SetPlayerSunShine(player, shine)|OnSyncSunShineChange(shine)|
+|Server|SetPlayerSunLightIntensity(player, intensity)|OnSyncSunLightIntensityChange(intensity)|
+|Server|SetPlayerSkySaturation(player, saturation)|OnSyncSkySaturationChange(saturation)|
+|Server|SetPlayerSkyLightIntensity(player, intensity)|OnSyncSkyLightIntensityChange(intensity)|
+|Server|SetPlayerSkyRotationSpeed(player, speed)|OnSyncSkyRotationSpeedChange(speed)|
+|Server|SetPlayerStarsBrightness(player, brightness)|OnSyncStarsBrightnessChange(intensity)|
+|Server|SetPlayerMoonShine(player, shine)|OnSyncMoonShineChange(shine)|
+|Server|SetPlayerMoonLightIntensity(player, intensity)|OnSyncMoonLightIntensityChange(intensity)|
+|Server|SetPlayerFogDensity(player, density)|OnSyncFogDensityChange(density)|
+|Server|SetPlayerOceanWaterLevel(player, WaterLevel [, bIncludeSwimmingVolume])|OnSyncOceanWaterLevelChange(WaterLevel, bIncludeSwimmingVolume)|
+|Server|ResetPlayerOceanColor(player)|OnSyncOceanColorReset()|
 
 \* Directs the *client sided* handle, they may vary per client! Use player property values to handle their handles!
 
